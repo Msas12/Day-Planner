@@ -44,6 +44,7 @@
       <h1 id="main-title" class="display-3">Work Day Scheduler</h1>
       <p class="lead">A calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
+      <p id="currentTime" class="lead"></p>
     </header>
 
 
@@ -57,9 +58,9 @@
         <div class="input-group-prepend">
           <span class="input-group-text pr-4" id="time-8am">8 am</span>
         </div>
-        <textarea class="form-control pb-4" placeholder="Events" aria-label="With textarea"></textarea>
+        <textarea class="form-control pb-4" data-hour="8" placeholder="Events" aria-label="With textarea"></textarea>
         <div class="input-group-append">
-          <button class="btn btn-success" type="button" id="save-button">Save</button>
+          <button class="btn btn-success save-button" data-hour="8" type="button">Save</button>
         </div>
       </div>
 
@@ -67,9 +68,9 @@
         <div class="input-group-prepend">
           <span class="input-group-text pr-4" id="time-9am">9 am</span>
         </div>
-        <textarea class="form-control pb-4" placeholder="Events" aria-label="With textarea"></textarea>
+        <textarea class="form-control pb-4" data-hour="9" placeholder="Events" aria-label="With textarea"></textarea>
         <div class="input-group-append">
-          <button class="btn btn-success" type="button" id="save-button">Save</button>
+          <button class="btn btn-success save-button" data-hour="9" type="button">Save</button>
         </div>
       </div>
 
@@ -77,9 +78,9 @@
         <div class="input-group-prepend">
           <span class="input-group-text pr-3" id="time-10am">10 am</span>
         </div>
-        <textarea class="form-control pb-4" placeholder="Events" aria-label="With textarea"></textarea>
+        <textarea class="form-control pb-4" data-hour="10" placeholder="Events" aria-label="With textarea"></textarea>
         <div class="input-group-append">
-          <button class="btn btn-success" type="button" id="save-button">Save</button>
+          <button class="btn btn-success save-button" data-hour="10" type="button">Save</button>
         </div>
       </div>
 
@@ -87,9 +88,9 @@
         <div class="input-group-prepend">
           <span class="input-group-text pr-3" id="time-11am">11 am</span>
         </div>
-        <textarea class="form-control pb-4" placeholder="Events" aria-label="With textarea"></textarea>
+        <textarea class="form-control pb-4" data-hour="11" placeholder="Events" aria-label="With textarea"></textarea>
         <div class="input-group-append">
-          <button class="btn btn-success" type="button" id="save-button">Save</button>
+          <button class="btn btn-success save-button" data-hour="11" type="button">Save</button>
         </div>
       </div>
 
@@ -97,9 +98,9 @@
         <div class="input-group-prepend">
           <span class="input-group-text pr-3" id="time-12pm">12 pm</span>
         </div>
-        <textarea class="form-control pb-4" placeholder="Events" aria-label="With textarea"></textarea>
+        <textarea class="form-control pb-4" data-hour="12" placeholder="Events" aria-label="With textarea"></textarea>
         <div class="input-group-append">
-          <button class="btn btn-success" type="button" id="save-button">Save</button>
+          <button class="btn btn-success save-button" data-hour="12" type="button">Save</button>
         </div>
       </div>
 
@@ -107,9 +108,9 @@
         <div class="input-group-prepend">
           <span class="input-group-text pr-4" id="time-1pm">1 pm</span>
         </div>
-        <textarea class="form-control pb-4" placeholder="Events" aria-label="With textarea"></textarea>
+        <textarea class="form-control pb-4" data-hour="13" placeholder="Events" aria-label="With textarea"></textarea>
         <div class="input-group-append">
-          <button class="btn btn-success" type="button" id="save-button">Save</button>
+          <button class="btn btn-success save-button" data-hour="13" type="button">Save</button>
         </div>
       </div>
 
@@ -117,9 +118,9 @@
         <div class="input-group-prepend">
           <span class="input-group-text pr-4" id="time-2pm">2 pm</span>
         </div>
-        <textarea class="form-control pb-4" placeholder="Events" aria-label="With textarea"></textarea>
+        <textarea class="form-control pb-4" data-hour="14" placeholder="Events" aria-label="With textarea"></textarea>
         <div class="input-group-append">
-          <button class="btn btn-success" type="button" id="save-button">Save</button>
+          <button class="btn btn-success save-button" data-hour="14" type="button">Save</button>
         </div>
       </div>
 
@@ -127,9 +128,9 @@
         <div class="input-group-prepend">
           <span class="input-group-text pr-4" id="time-3pm">3 pm</span>
         </div>
-        <textarea class="form-control pb-4" placeholder="Events" aria-label="With textarea"></textarea>
+        <textarea class="form-control pb-4" data-hour="15" placeholder="Events" aria-label="With textarea"></textarea>
         <div class="input-group-append">
-          <button class="btn btn-success" type="button" id="save-button">Save</button>
+          <button class="btn btn-success save-button" data-hour="15" type="button">Save</button>
         </div>
       </div>
 
@@ -137,9 +138,9 @@
         <div class="input-group-prepend">
           <span class="input-group-text pr-4" id="time-4pm">4 pm</span>
         </div>
-        <textarea class="form-control pb-4" placeholder="Events" aria-label="With textarea"></textarea>
+        <textarea class="form-control pb-4" data-hour="16" placeholder="Events" aria-label="With textarea"></textarea>
         <div class="input-group-append">
-          <button class="btn btn-success" type="button" id="save-button">Save</button>
+          <button class="btn btn-success save-button" data-hour="16" type="button">Save</button>
         </div>
       </div>
 
@@ -147,9 +148,61 @@
         <div class="input-group-prepend">
           <span class="input-group-text pr-4" id="time-5pm">5 pm</span>
         </div>
-        <textarea class="form-control pb-4" placeholder="Events" aria-label="With textarea"></textarea>
+        <textarea class="form-control pb-4" data-hour="17" placeholder="Events" aria-label="With textarea"></textarea>
         <div class="input-group-append">
-          <button class="btn btn-success" type="button" id="save-button">Save</button>
+          <button class="btn btn-success save-button" data-hour="17" ype="button">Save</button>
+        </div>
+      </div>
+
+      <!--TESTING HOURS REMOVE BEFORE SUBMISSION-->
+
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text pr-4" id="time-5pm">6 pm</span>
+        </div>
+        <textarea class="form-control pb-4" data-hour="18" placeholder="Events" aria-label="With textarea"></textarea>
+        <div class="input-group-append">
+          <button class="btn btn-success save-button" data-hour="18" ype="button">Save</button>
+        </div>
+      </div>
+
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text pr-4" id="time-5pm">7 pm</span>
+        </div>
+        <textarea class="form-control pb-4" data-hour="19" placeholder="Events" aria-label="With textarea"></textarea>
+        <div class="input-group-append">
+          <button class="btn btn-success save-button" data-hour="19" ype="button">Save</button>
+        </div>
+      </div>
+
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text pr-4" id="time-5pm">8 pm</span>
+        </div>
+        <textarea class="form-control pb-4" data-hour="20" placeholder="Events" aria-label="With textarea"></textarea>
+        <div class="input-group-append">
+          <button class="btn btn-success save-button" data-hour="20" ype="button">Save</button>
+        </div>
+      </div>
+
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text pr-4" id="time-5pm">9 pm</span>
+        </div>
+        <textarea class="form-control pb-4" data-hour="21" placeholder="Events" aria-label="With textarea"></textarea>
+        <div class="input-group-append">
+          <button class="btn btn-success save-button" data-hour="21" ype="button">Save</button>
+        </div>
+      </div>
+
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text pr-3" id="time-5pm">10 pm</span>
+        </div>
+        <textarea class="form-control pb-4" data-hour="22" placeholder="Events" aria-label="With textarea"></textarea>
+        <div class="input-group-append">
+          <button class="btn btn-success save-button" data-hour="22" ype="button">Save</button>
         </div>
       </div>
       <br>
@@ -159,7 +212,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/luxon@1.25.0/build/global/luxon.min.js"></script>
+    <script src="./moment.js"></script>
     <script src="./script.js"></script>
   </body>
 </html>
