@@ -10,11 +10,7 @@ body {
 }
 
 textarea{
-  background: transparent;
   resize: none;
-  color: #000000;
-  border-left: 1px solid black;
-  padding: 10px;
 }
 
 .jumbotron {
@@ -25,6 +21,11 @@ textarea{
   color: black;
   border-radius: 0;
   border-bottom: 10px solid black;
+}
+
+.save-button i:hover {
+  font-size: 20px;
+  transition: all .3s ease-in-out;
 }
 
 
