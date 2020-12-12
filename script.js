@@ -61,7 +61,7 @@ $(document).ready(function(){
     function init (){
         var storedEventItems = JSON.parse(localStorage.getItem("events"))
 
-        if (storedEventItems !== "") {
+        if (storedEventItems !== null) {
             for (var i = 0; i<storedEventItems.length; i++) {
                 $('.event-text[data-hour='+storedEventItems[i].hour+']').val(storedEventItems[i].value)
             }      
