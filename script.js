@@ -24,12 +24,6 @@ $(document).ready(function(){
         }
      });
 
-     // Empty array to store values eneted into textarea inputed by user
-     var eventItems = []
-
-
-
-
 
      // Function to save Events in text area when save button is clicked
      $('.save-button').on('click', function(){
@@ -37,16 +31,28 @@ $(document).ready(function(){
          var saveButtonHour = ($(this).attr("data-hour"))
          console.log(saveButtonHour)
 
-         // Variable for value of text field of specific save button
-         var inputValue = $(this).parent().siblings('.event-text').val()
-         console.log(inputValue)
-        //  // Variable to specify what hour the input is in
-        //  var inputHour = $(this).parent().siblings('.event-text').attr("data-hour")
-        //  console.log(inputHour)
+        // Variable for value of text field of specific save button
+        var inputValue = $(this).parent().siblings('.event-text').val()
+        console.log(inputValue)
 
-         eventItems.push(inputValue)
+        // Variable to get current saved items
+        var currentEvents = JSON.parse(localStorage.getItem('events'))
+        console.log(currentEvents)
 
-        localStorage.setItem('events', JSON.stringify(eventItems))
+        if (!currentEvents || currentEvents.length == 0) {
+            currentEvents = []
+        }
+
+        // Object to save current events to
+        var eventsObj = {
+            hour: saveButtonHour,
+            value: inputValue
+        }
+
+        // Pushes current events data into eventsObj for easy recall
+        currentEvents.push(eventsObj)
+
+        localStorage.setItem('events', JSON.stringify(currentEvents))
 
         
     })
@@ -55,10 +61,11 @@ $(document).ready(function(){
     function init (){
         var storedEventItems = JSON.parse(localStorage.getItem("events"))
 
-            if (storedEventItems !== "") {
-                eventsItems = storedEventItems;
-                $('.event-text').html(eventItems)
-            }
+        if (storedEventItems !== "") {
+            for (var i = 0; i<storedEventItems.length; i++) {
+                $('.event-text[data-hour='+storedEventItems[i].hour+']').val(storedEventItems[i].value)
+            }      
+        }
     }
 
 // Initializing function call
