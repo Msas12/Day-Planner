@@ -4,7 +4,7 @@
 
 The following animation demonstrates the application functionality:
 
-![Day Planner](./assets/images)
+![Day Planner](./assets/images/dayplanner.gif)
 
 ## User Story
 
